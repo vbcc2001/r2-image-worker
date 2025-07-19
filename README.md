@@ -1,3 +1,10 @@
+### 部署注意点：
+- wrangler.toml 中 修改： name = "image"
+- 配置的 USER:image/PASS:nd5J8UOsqxqePt, base64处理：image:nd5J8UOsqxqePt=>aW1hZ2U6bmQ1SjhVT3NxeHFlUHQ=
+- Wrangler通过npm install 安装后运行命令改为 npx wrangler
+- 访问图片时候地址不用验证用户密码，直接访问：https://change_url_here/image_returned_name
+- 使用 Cloudflare Images 地址为：https://change_url_here/cdn-cgi/image/format=auto,width=800,quality=75/image_returned_name
+
 # r2-image-worker
 
 Store and deliver images with Cloudflare R2 backend Cloudflare Workers.
